@@ -8,6 +8,10 @@ function fetchProductById(id) {
   return instance.get(`/products/${id}`)
 }
 
+function fetchProducts() {
+  return instance.get('/products')
+}
+
 function fetchProductsByKeyword(keyword) {
   return instance.get('/products', {
     params: {
@@ -24,4 +28,4 @@ function createCartItem(cartItem) {
   return instance.post('/carts', cartItem)
 }
 
-export { fetchProductById, fetchProductsByKeyword, createCartItem, fetchCartItems }
+export { fetchProductById, fetchProductsByKeyword, createCartItem, fetchCartItems, fetchProducts }
